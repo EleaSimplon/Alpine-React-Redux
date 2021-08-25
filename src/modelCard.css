@@ -1,0 +1,29 @@
+.card-container{
+    height: 90vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.card-title{
+    text-align: center;
+    margin: 1vw;
+}
+
+.card-container img{ 
+    transition:  0.5s ease;
+}
+
+.card-container img:hover{ 
+    transform: scale(1.1);
+}
+
+.text-home {
+    text-align: center;
+    color: white;
+}
+
+.card{
+    overflow: hidden;
+}
