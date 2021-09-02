@@ -4,6 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import './modelCard.css';
+import './carousel.css';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from "react-redux";
 import store from "./store/index";

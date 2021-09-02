@@ -4,9 +4,11 @@ import { connect } from 'react-redux';
 import { selectColor } from '../actions';
 import { selectRim } from '../actions';
 import { selectSaddlery } from '../actions';
+import { selectEquipment } from '../actions';
+import { selectAccessories } from '../actions';
 import { Link } from "react-router-dom";
 
-const CardOptionConnect = ({props, selectCarColor, selectCarRim, selectCarSaddlery}) => {
+const CardOptionConnect = ({props, selectCarColor, selectCarRim, selectCarSaddlery, selectCarEquipment, selectCarAccessories}) => {
 
     function handleClick() {
         switch (props.type) {
@@ -16,6 +18,10 @@ const CardOptionConnect = ({props, selectCarColor, selectCarRim, selectCarSaddle
                return selectCarRim(props.element)
             case 'saddlery':
                return selectCarSaddlery(props.element)
+            case 'equipments':
+               return selectCarEquipment(props.element)
+            case 'accessories':
+                return selectCarAccessories(props.element)
             // default:
             //    return
         }
@@ -31,13 +37,14 @@ const CardOptionConnect = ({props, selectCarColor, selectCarRim, selectCarSaddle
                     <Card.Text>{props.description} </Card.Text>
                     <Card.Text>{props.price} $</Card.Text>
                     <Link to={props.link}>
-                        <Button variant="primary" onClick={()=>handleClick()}>Select</Button>
+                        <Button variant="outline-primary" size="lg" onClick={()=>handleClick()}>Select</Button>
                     </Link >
                 </Card.Body>
             </Card>
         </div>
 
-    )};
+    )
+};
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -50,6 +57,8 @@ const mapDispatchToProps = (dispatch) => {
         selectCarColor: (payload) => dispatch(selectColor(payload)),
         selectCarRim: (payload) => dispatch(selectRim(payload)),
         selectCarSaddlery: (payload) => dispatch(selectSaddlery(payload)),
+        selectCarEquipment: (payload) => dispatch(selectEquipment(payload)),
+        selectCarAccessories: (payload) => dispatch(selectAccessories(payload)),
     };
 };
 

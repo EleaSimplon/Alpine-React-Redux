@@ -13,3 +13,12 @@ export function selectRim(payload){
 export function selectSaddlery(payload){
     return {type : "SELECT_SADDLERY", payload}
 }
+
+export function selectEquipment(payload){
+    console.log(payload, "payload");
+    return {type : "SELECT_EQUIPMENT", payload}
+}
+
+export function selectAccessories(payload){
+    return {type : "SELECT_ACCESSORIES", payload}
+}

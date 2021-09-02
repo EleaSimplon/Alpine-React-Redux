@@ -1,10 +1,8 @@
 import React from 'react';
-import NavBarHome from './NavBarHome';
 import pure from './OptionPure';
 import legend from './OptionLegend';
 import {connect} from 'react-redux';
 import CardOption from './CardOption';
-
 
 const mapStateToProps = (state, ) => {
     return { OptionSelected: state.OptionSelected
@@ -16,7 +14,7 @@ const ChangeSaddleryConnect = ({OptionSelected}) => {
 
     let data
     
-    if (OptionSelected.name == 'A110 Pure') {
+    if (OptionSelected.name === 'A110 Pure') {
         data =  pure
     } else {
         data =  legend
@@ -27,7 +25,7 @@ const ChangeSaddleryConnect = ({OptionSelected}) => {
     return (
 
         <div>
-            <NavBarHome />
+            
                 <div className="d-flex justify-content-around">
                     {Object.keys(data.saddlery).map((key)=>{
 

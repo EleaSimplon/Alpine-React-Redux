@@ -14,7 +14,7 @@ const mapStateToProps = (state, ) => {
 const ChangeColorConnect = ({OptionSelected}) => {
     let data
 
-    if (OptionSelected.name == 'A110 Pure') {
+    if (OptionSelected.name === 'A110 Pure') {
         data =  pure
     } else {
         data =  legend
@@ -24,10 +24,10 @@ const ChangeColorConnect = ({OptionSelected}) => {
 
     return (
         <div>
-            <NavBarHome />
             <div className="d-flex justify-content-around">
                 {Object.keys(data.color).map((key)=>{
-                return <CardOption type="colors" link='rims' element={data.color[key]} name={data.color[key].name} description='' price={data.color[key].price} img={data.color[key].img} />
+
+                    return <CardOption type="colors" link='rims' element={data.color[key]} name={data.color[key].name} description='' price={data.color[key].price} img={data.color[key].img} />
                 })}
             </div> 
         </div>

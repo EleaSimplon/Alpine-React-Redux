@@ -28,7 +28,7 @@ const ModelCardConnect = ({selectCarVersion}) => {
                        Starting from {OptionPure.default.price} $
                     </Card.Text>
                     <Link to="/colors">
-                        <Button variant="primary" onClick={ () => handleClick(OptionPure) }>Personalize your car</Button>
+                        <Button variant="outline-primary" onClick={ () => handleClick(OptionPure) }>Personalize your car</Button>
                     </Link>
                 </Card.Body>
             </Card>
@@ -44,7 +44,7 @@ const ModelCardConnect = ({selectCarVersion}) => {
                        Starting from {OptionLegend.default.price} $
                     </Card.Text>
                     <Link to="/colors">
-                        <Button variant="primary" onClick={ () =>handleClick(OptionLegend) }>Personalize your car</Button>
+                        <Button variant="outline-primary" onClick={ () =>handleClick(OptionLegend) }>Personalize your car</Button>
                     </Link>
                 </Card.Body>
             </Card>

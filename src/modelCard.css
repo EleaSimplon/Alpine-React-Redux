@@ -9,6 +9,7 @@
 .card-title{
     text-align: center;
     margin: 1vw;
+    color: #fff;
 }
 
 .card-container img{ 
@@ -26,4 +27,9 @@
 
 .card{
     overflow: hidden;
+}
+
+.card-body {
+    background-color: #051C2C;
+    color: #fff;
 }

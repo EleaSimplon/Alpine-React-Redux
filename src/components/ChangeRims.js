@@ -3,7 +3,6 @@ import pure from './OptionPure'
 import legend from './OptionLegend'
 import {connect} from 'react-redux'
 import CardOption from './CardOption';
-import NavBarHome from "./NavBarHome";
 
 const mapStateToProps = (state, ) => {
     return { OptionSelected: state.OptionSelected
@@ -13,7 +12,7 @@ const mapStateToProps = (state, ) => {
 
 const ChangeRimConnect = ({OptionSelected}) => {
     let data
-        if (OptionSelected.name == 'A110 Pure') {
+        if (OptionSelected.name === 'A110 Pure') {
             data =  pure
         } else {
             data =  legend
@@ -36,7 +35,6 @@ const ChangeRimConnect = ({OptionSelected}) => {
     return (
 
         <div>
-            <NavBarHome />
                 <div className="d-flex justify-content-around">
                     {Object.keys(data.rims).map((key)=>{
                     return (<CardOption type="rims" link='saddlery' element={data.rims[key]} name={data.rims[key].name} description='' price={data.rims[key].price} 
